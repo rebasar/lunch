@@ -6,7 +6,6 @@ import (
 	"github.com/rebasar/lunch/fsutil"
 	"io/ioutil"
 	"net/http"
-	"time"
 )
 
 const (
@@ -30,8 +29,8 @@ func (self Place) hasAlias(s string) bool {
 }
 
 type Menu struct {
-	ValidFrom  time.Time
-	ValidUntil time.Time
+	ValidFrom  Date
+	ValidUntil Date
 	Items      []Item
 }
 
@@ -164,5 +163,5 @@ func NewClient(uri string) (Client, error) {
 func NewClientWithCache(uri, cacheFileName string) (Client, error) {
 	fetcher := CachePlaceListFetcher{HttpPlaceListFetcher{uri}, cacheFileName}
 	places, err := fetchPlaceList(uri, fetcher)
-	return Client{uri, places}, err	
+	return Client{uri, places}, err
 }

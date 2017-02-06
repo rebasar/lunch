@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/rebasar/lunch/lunchy"
 	"github.com/rebasar/lunch/fsutil"
+	"github.com/rebasar/lunch/lunchy"
 	"log"
 	"os"
 	"strings"

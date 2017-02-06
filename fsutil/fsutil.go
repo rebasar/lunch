@@ -25,7 +25,7 @@ func ReadConfigFile(fullPath string) ([]byte, error) {
 }
 
 func WriteConfigFile(body []byte, fullPath string) error {
-	return ioutil.WriteFile(fullPath, body, 0666);
+	return ioutil.WriteFile(fullPath, body, 0666)
 }
 
 func RemoveConfigFile(fullPath string) error {
