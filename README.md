@@ -16,6 +16,9 @@ $ go get github.com/rebasar/lunch
 $ go install github.com/rebasar/lunchy
 ```
 
+Or just download the precompiled binary for your platform from
+https://github.com/rebasar/lunch/releases
+
 ## Usage
 
 Just call without any parameters, as `lunchy` to get a list of
