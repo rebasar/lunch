@@ -2,9 +2,9 @@ language: go
 
 script:
   - GOOS=linux GOARCH=amd64 go build -o lunch.linux64
-  - GOOS=linux GOARCH=x86 go build -o lunch.linux32
+  - GOOS=linux GOARCH=386 go build -o lunch.linux32
   - GOOS=windows GOARCH=amd64 go build -o lunch.win64.exe
-  - GOOS=windows GOARCH=x86 go build -o lunch.win32.exe
+  - GOOS=windows GOARCH=386 go build -o lunch.win32.exe
   - GOOS=darwin GOARCH=amd64 go build -o lunch.darwin64
 
 go:
