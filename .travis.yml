@@ -1,11 +1,8 @@
 language: go
 
 script:
-  - go build
-
-env:
-  - GOOS=linux
-  - GOOS=windows
+  - GOOS=linux go build
+  - GOOS=windows go build
 
 go:
   - 1.7.x
@@ -14,7 +11,9 @@ deploy:
   provider: releases
   api_key:
     secure: "l4Kgekh9MXrb1r+v8642RMHFF3qWO87I9pMxjP14CmyeMu2NqFRWWnCMqoaW+W245mtkgDUipruKmkGLrllS02gtCqhp6GIatVDiHFT+fQfExo5dq6PWZZvymzoggIEl/PZfX6T/hslufZYl8RPK1pA7vq+usxb69zHV/nA1r/MsNeSu7fa2LXkn+ymW2pUarYDwCUFiE5uXhXPhyYgfsWWAX3QbFwrXU3oQoZ+QBQVUG8ghE9bFzMPC2SjjBI6MZygRKu/KtffTdnWolu2CwZuyXqc7JVnyDCAeSuE69tI9kgqtSd9Rlisl5BSjRWCPwGQfz4gi6ydJYpAhqcS5t1eH1SBQVx4DnbQTZ/MP3nWpKhXWqaaHlwerFm50+qFw1Qx3BnDCSWNVwagn0mg4Gep2J0JcQoGvf1zWChkEu6L6D7mOMHfyM2Vlifjjp4TLGUyUmI2J0ZAH31qdcQWP5KNnX4mdlop5C8nnxt4xpoQZ+hcDc9j88dCnf5E+GYZDYReZPol4AF/0g5ChyTc4rwlso0xZvuO81st/P00981XHcKNqzO6sK7dxPUF4k1hxTODSb+Q250T4Ir2a/T6GKq9tSA9uPGxo/14VbeNypgYTea/QDWOdZOxd1f7AlPIcalv0Al+KGaJ8U46bKt5LVHgb0oxwSXYKt6C/oBDNEGw="
-  file: lunch
+  file:
+    - "lunch"
+    - "lunch.exe"
   skip_cleanup: true
   on:
     tags: true
