@@ -12,7 +12,7 @@ import (
 const (
 	LUNCH_FORMAT        = "%%d | %%-%ds | %%s\n"
 	PLACE_HEADER        = "Place"
-	DEFAULT_LUNCH_URL   = "https://rebworks.net/lunch/"
+	DEFAULT_LUNCH_URL   = "https://lunchy.nu/lunch/"
 	URL_CONFIG_FILENAME = ".lunchy.url"
 )
 
